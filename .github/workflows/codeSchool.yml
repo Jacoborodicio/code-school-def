@@ -6,7 +6,7 @@ on:
       - master
 defaults:
   run:
-    working-directory: codeSchool
+    working-directory: code-school
 
 jobs:
   build:
@@ -22,7 +22,8 @@ jobs:
       - run: npm install
       - run: npm install
       - run: npm run build
-
+        env:
+          PRODUCTION_DOMAIN: ${{secrets.PRODUCTION_DOMAIN}}
       - uses: chrislennon/action-aws-cli@v1.1
 
       - run: aws s3 sync dist s3://${{secrets.AWS_S3_BUCKET_NAME}}/dashboard/latest
