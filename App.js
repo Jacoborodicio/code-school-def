@@ -7,7 +7,7 @@ export default () => {
     console.log('in app from dashboard')
     return (
         <div>
-            <p>Hola desde esta app!</p>
+            <p>Esto es en realidad codeSchool!!!</p>
             <BrowserRouter>
                 <Switch>
                     <Route exact path='/pricing' component={Pricing} />
