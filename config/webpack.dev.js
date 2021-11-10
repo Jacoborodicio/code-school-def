@@ -13,7 +13,7 @@ const devConfig = {
   },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'code-school',
+            name: 'code_school',
             filename: 'remoteEntry.js',
             exposes: {
                 './codeSchoolApp': './src/bootstrap'
