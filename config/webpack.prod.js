@@ -9,11 +9,11 @@ const prodConfig = {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js',
-        publicPath: '/code_school/latest/'
+        publicPath: '/code-school/latest/'
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'code_school',
+            name: 'code-school',
             filename: 'remoteEntry.js',
             exposes: {
                 './codeSchoolApp': './src/bootstrap'
