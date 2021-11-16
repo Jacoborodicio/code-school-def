@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import App from "./App";
+import './styles.css';
+
 // Mount function to start up the app
 const mount = (el) => {
     ReactDom.render(

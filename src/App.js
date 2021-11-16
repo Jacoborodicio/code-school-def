@@ -1,9 +1,10 @@
 import React from 'react';
+import Dashboard  from "./components/Dashboard/Dashboard";
+import useWindowDimensions from "./hooks/useWindowDimensions";
 
-export default () => {
-    console.log('in app from code-school')
+const App = () => {
+    const {width, height} = useWindowDimensions();
     return (
-        <div>
-            <p>Esto es en realidad codeSchool!!!</p>
-    </div>
+        <Dashboard width={width} height={height}/>
     )};
+export default App;
