@@ -1,9 +1,12 @@
 /** @jsx jsx **/
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState, lazy, Suspense} from 'react';
 import {jsx} from "@emotion/react";
 import {Container} from "./dashboard-styles";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
-import DashboardCard from "./Cards/DashboardCard";
+import {mainTopics} from "../../helpers/constants";
+import {Route, BrowserRouter} from "react-router-dom";
+
+const TopicsPanel = lazy(() => import('./TopicsPanel'));
+const CssGrid = lazy(() => import('../CssGrid/CssGrid'));
 
 const Dashboard = ({width, height}) => {
     const containerProps = {
@@ -11,7 +14,18 @@ const Dashboard = ({width, height}) => {
     }
     return (
         <Container {...containerProps}>
-            <DashboardCard />
+            <BrowserRouter>
+                <Route path={'/css-grid'}>
+                    <Suspense fallback={''}>
+                        <CssGrid/>
+                    </Suspense>
+                </Route>
+                <Route path={'/'} exact>
+                    <Suspense fallback={''}>
+                        <TopicsPanel />
+                    </Suspense>
+                </Route>
+            </BrowserRouter>
         </Container>
     )
 }

@@ -7,10 +7,15 @@ export const InnerText = styled('div')`
 `;
 
 export const Container = styled('div')`
+	overflow: auto;
 	padding: 1rem;
 	display: flex;
-	background: rgb(83,190,166);
-	background: linear-gradient(90deg, rgba(83,190,166,1) 10%, rgba(223,144,15,1) 56%, rgba(158,39,145,1) 100%);
+	gap: 1rem;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	align-items: center;
+	background: rgb(71,58,112);
+	background: linear-gradient(90deg, rgba(71,58,112,1) 0%, rgba(40,39,85,1) 25%, rgba(77,8,77,1) 60%, rgba(89,17,81,1) 100%);
 	min-height: ${props => props.hasOwnProperty('dimensions') ? props.dimensions.height + 'px' : undefined};
 	min-width: ${props => props.hasOwnProperty('dimensions') ? props.dimensions.width + 'px' : undefined};
 	${props => typeof props.style === 'object' ? {...props.style} : props.style}
