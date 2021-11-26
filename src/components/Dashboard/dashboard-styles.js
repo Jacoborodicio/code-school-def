@@ -7,6 +7,7 @@ export const InnerText = styled('div')`
 `;
 
 export const Container = styled('div')`
+	box-sizing: border-box;
 	overflow: auto;
 	padding: 1rem;
 	display: flex;

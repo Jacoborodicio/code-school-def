@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react';
 
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
+    let outerHeight = window.outerHeight;
+    // If there is a present scrollbar removes the extra space
+    let normalWidth  = outerHeight > height ? width - document.body.scrollWidth  : width;
     return {
-        width,
+        width: normalWidth,
         height
     };
 }

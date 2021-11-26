@@ -20,7 +20,7 @@ const GlobalContainer = styled('article')`
 
     & > div:first-of-type {
       & img {
-        width: 1.75rem;
+        width: 4rem;
         aspect-ratio: 1;
         border-radius: 50%;
       }
@@ -38,7 +38,9 @@ const GlobalContainer = styled('article')`
   margin-bottom: .313rem;
 },
 & p:last-of-type {
+  font-size: 1rem;
   opacity: .85;
+  letter-spacing: 1.2px;
 }
 
 `;
@@ -48,7 +50,7 @@ const Testimonial = ({image, name, position, message, declaration}) => {
         <GlobalContainer>
             <div>
                 <div>
-                    <img src={'./public/assets/images/image-daniel.jpg'} alt={name}/>
+                    <img src={image} alt={name}/>
                 </div>
                 <div>
                     <h2>{name}</h2>
