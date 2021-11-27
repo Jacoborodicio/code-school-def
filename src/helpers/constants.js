@@ -69,6 +69,16 @@ export const mainTopics = [
         stars: 12, // Number of reputation stars
         ratio: 3, // Global valuation from 0-5
         link: '/mutability'
+    },
+    {
+        id: 8,
+        title: 'Theming',
+        image: '',
+        imageDescription: '',
+        description: 'Rules, notes, technics, best practices when extending MUI Theme and use it in production',
+        stars: 325, // Number of reputation stars
+        ratio: 4, // Global valuation from 0-5
+        link: '/theming'
     }
 ]
 export const testimonials = [

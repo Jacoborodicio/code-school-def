@@ -10,16 +10,23 @@ export const Container = styled('div')`
 	box-sizing: border-box;
 	overflow: auto;
 	padding: 1rem;
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 1rem;
-	flex-wrap: wrap;
-	align-content: flex-start;
-	align-items: center;
 	background: rgb(71,58,112);
 	background: linear-gradient(90deg, rgba(71,58,112,1) 0%, rgba(40,39,85,1) 25%, rgba(77,8,77,1) 60%, rgba(89,17,81,1) 100%);
 	min-height: ${props => props.hasOwnProperty('dimensions') ? props.dimensions.height + 'px' : undefined};
 	min-width: ${props => props.hasOwnProperty('dimensions') ? props.dimensions.width + 'px' : undefined};
-	${props => typeof props.style === 'object' ? {...props.style} : props.style}
+	${props => typeof props.style === 'object' ? {...props.style} : props.style};
+	@media (max-width: 80rem) {
+		grid-template-columns: repeat(3, 1fr);
+	};
+	@media (max-width: 50rem) {
+		grid-template-columns: 1fr 1fr;
+	};
+	@media (max-width: 30rem) {
+		grid-template-columns: 1fr;
+	};
 `
 
 export const Label = styled('label')`

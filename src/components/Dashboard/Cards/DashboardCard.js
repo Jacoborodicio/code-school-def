@@ -5,11 +5,15 @@ import {jsx} from "@emotion/react";
 import {NavLink} from "react-router-dom";
 
 const CardContainer = styled('div')`
-  height: 200px;
-  width: 400px;
+  height: 100%;
+  width: 100%;
   padding: .5rem;
   border-radius: .5rem;
-  background-color: white;
+  color: burlywood;
+  background-color: rgba(0,0,0, .25);
+  //  0 0 2px 1px hsl(217deg 18% 35% / 100%),
+  box-shadow: 0 0 7px 4px hsl(217deg 18% 35% / 20%);
+
 `;
 
 const CardHeader = styled('div')`
