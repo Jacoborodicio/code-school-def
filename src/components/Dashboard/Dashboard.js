@@ -1,8 +1,7 @@
 /** @jsx jsx **/
-import React, {useEffect, useRef, useState, lazy, Suspense} from 'react';
+import React, {lazy, Suspense} from 'react';
 import {jsx} from "@emotion/react";
 import {Container} from "./dashboard-styles";
-import {mainTopics} from "../../helpers/constants";
 import {Route, BrowserRouter} from "react-router-dom";
 
 const TopicsPanel = lazy(() => import('./TopicsPanel'));
