@@ -1,8 +1,9 @@
-import React from 'react';
+/** @jsx jsx **/
+import React, {lazy, Suspense} from 'react';
 import {styled} from "@mui/material";
+import {jsx, css} from "@emotion/react";
 import {testimonials} from "../../helpers/constants";
-import Testimonial from "./Testimonial";
-
+const Testimonial = lazy(() => import('./Testimonial'));
 
 const TestimonialsGrid = styled('div')`
   display: grid;
@@ -15,13 +16,14 @@ const TestimonialsGrid = styled('div')`
 `;
 
 const CssGrid = () => {
+    console.log('File: CssGrid.js, Function: CssGrid, Line 17 --> testimonials: ', testimonials);
     return (
         <TestimonialsGrid>
             {
-        testimonials.map(({id, image, name, position, message, declaration}) => (
+        testimonials.map(({id, name, position, message, declaration}) => (
                 <Testimonial
                     key={id}
-                    image={image}
+                    //image={image}
                     name={name}
                     position={position}
                     message={message}
