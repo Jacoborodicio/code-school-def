@@ -8,7 +8,6 @@ const TopicsPanel = lazy(() => import('./TopicsPanel'));
 const CssGrid = lazy(() => import('../CssGrid/CssGrid'));
 
 const Dashboard = ({width, height, history}) => {
-    console.log('in dasboard-2')
     const containerProps = {
         dimensions: {height, width},
     }
