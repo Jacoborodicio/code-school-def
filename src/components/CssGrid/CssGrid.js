@@ -3,6 +3,7 @@ import React, {lazy, Suspense} from 'react';
 import {styled} from "@mui/material";
 import {jsx, css} from "@emotion/react";
 import {testimonials} from "../../helpers/constants";
+import Button from "../Button/Button";
 const Testimonial = lazy(() => import('./Testimonial'));
 
 const TestimonialsGrid = styled('div')`
@@ -16,22 +17,25 @@ const TestimonialsGrid = styled('div')`
 `;
 
 const CssGrid = () => {
-    console.log('File: CssGrid.js, Function: CssGrid, Line 17 --> testimonials: ', testimonials);
     return (
-        <TestimonialsGrid>
-            {
-        testimonials.map(({id, name, position, message, declaration}) => (
-                <Testimonial
-                    key={id}
-                    //image={image}
-                    name={name}
-                    position={position}
-                    message={message}
-                    declaration={declaration}
-                />
-            ))
-        }
-        </TestimonialsGrid>
+        <>
+            <Button back  />
+
+            <TestimonialsGrid>
+                {
+            testimonials.map(({id, name, position, message, declaration, image}) => (
+                    <Testimonial
+                        key={id}
+                        image={image}
+                        name={name}
+                        position={position}
+                        message={message}
+                        declaration={declaration}
+                    />
+                ))
+            }
+            </TestimonialsGrid>
+        </>
     )}
 
 export default CssGrid;

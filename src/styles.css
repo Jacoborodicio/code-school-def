@@ -1,6 +1,48 @@
 @import url('./preset.css');
 
+:root {
+    --primary-main: #423d3f;
+    --secondary-main: #EEABC4;
+    --mint-cream: #EBF5EE;
+    --dark-bizantium: #542344;
+    --grey-web: #808080;
+    --blue-ncs: #2E86AB;
+}
+
 html {
     height: 100vh;
     font-family: "Roboto", sans-serif;
+}
+
+/*rgb(66, 61, 63)*/
+
+
+
+
+.trails-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trails-text {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    color: rgb(66, 61, 63);
+    font-size: 5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    will-change: transform, opacity;
+    overflow: hidden;
+}
+
+.trails-text > div {
+    overflow: hidden;
 }
